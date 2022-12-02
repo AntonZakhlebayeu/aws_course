@@ -7,7 +7,7 @@ EC2_INSTANCE_TYPE=t2.micro
 GH_ACCESS_TOKEN=$(cat ~/.github/aws_course-access-token)
 GH_OWNER=$(cat ~/.github/aws_course-owner)
 GH_REPO=$(cat ~/.github/aws_course-repo)
-GH_BRANCH=master
+GH_BRANCH=main
 
 AWS_ACCOUNT_ID=`aws sts get-caller-identity --profile awsbootstrap --query "Account" --output text`
 CODEPIPELINE_BUCKET="$STACK_NAME-$REGION-codepipeline-$AWS_ACCOUNT_ID" 
