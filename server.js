@@ -1,8 +1,8 @@
-const { hostname } = require('os');
-const http = require('http');
+import { hostname } from 'os';
+import { createServer } from 'http';
 const message = 'Hello World from AWS\n';
 const port = 8080; 
-const server = http.createServer((req, res) => { 
+const server = createServer((req, res) => { 
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
   res.end(message);
