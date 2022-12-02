@@ -1,6 +1,6 @@
 import { hostname } from 'os';
 import { createServer } from 'http';
-const message = 'Hello World from AWS\n';
+const message = `Hello World from ${hostname()}\n`; 
 const port = 8080; 
 const server = createServer((req, res) => { 
   res.statusCode = 200;
